@@ -167,24 +167,28 @@
   padding: 2px 0;      
 }
 
-    .rekening-bar {
+.rekening-row {
   display: flex;
-  gap: 20px; 
+  gap: 20px;
+  margin-top: 10px;
   margin-bottom: 10px;
 }
 
-.rekening-item {
-  flex: 1; 
+.rekening-col {
+  flex: 1;
 }
 
-.rekening-item label {
+.rekening-col label {
   display: block;
   margin-bottom: 4px;
+  font-weight: bold;
 }
 
-.rekening-item input {
+.rekening-col input {
   width: 100%;
-  padding: 4px 8px;
+  padding: 6px 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
   box-sizing: border-box;
 }
   </style>
@@ -210,20 +214,20 @@
   <option value="maybank">Bank Maybank</option>
 </select>
 
-   <label>Informasi Rekening Pengirim</label>
+  <label>Informasi Rekening Pengirim</label>
 
-<div class="rekening-bar">
-  <div class="rekening-item">
+<div class="rekening-row">
+  <div class="rekening-col">
     <label>Nama Pemilik Rekening</label>
     <input type="text" value="Lala">
   </div>
-
-  <div class="rekening-item">
+  <div class="rekening-col">
     <label>No Rekening</label>
     <input type="text" value="55668885">
   </div>
 </div>
-    <small>Jika melalui teller, isi Nomor Rekening dengan 0000.</small>
+
+<small>Jika melalui teller, isi Nomor Rekening dengan 0000.</small>
 
     <div class="checkbox-container">
       <input type="checkbox" checked>
