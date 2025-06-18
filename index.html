@@ -29,10 +29,19 @@
       font-weight: bold;
     }
     input, select {
-      width: 100%;
-      padding: 8px;
-      margin-top: 5px;
-      margin-bottom: 10px;
+  width: 100%;
+  padding: 8px 4px;
+  margin-top: 5px;
+  margin-bottom: 10px;
+  border: none;
+  border-bottom: 2px solid #ccc;
+  background-color: transparent;
+  outline: none;
+  box-sizing: border-box;
+  font-size: 16px;
+    }
+    input:focus, select:focus {
+  border-bottom: 2px solid #000000;
     }
     .checkbox-container {
       display: flex;
@@ -73,10 +82,15 @@
   <div class="form-section">
     <h3>✔ Transfer Manual</h3>
 
-    <label>Bank Tujuan</label>
-    <select>
-      <option>Bank BCA</option>
-    </select>
+    <label for="bank">Bank Tujuan</label>
+<select id="bank" name="bank">
+  <option value="bca">Bank BCA</option>
+  <option value="bni">Bank BNI</option>
+  <option value="bri">Bank BRI</option>
+  <option value="mandiri">Bank Mandiri</option>
+  <option value="OCBC">Bank OCBC</option>
+  <option value="my bank">Bank MY Bank</option>
+</select>
 
     <label>Informasi Rekening Pengirim</label>
     <label>Nama Pemilik Rekening</label>
