@@ -196,6 +196,17 @@ rekening-row {
   box-sizing: border-box;
   outline: none;
 }
+    .transfer-manual-box {
+  background-color: rgba(0, 128, 0, 0.1);
+  padding: 12px 16px;
+  border-radius: 6px;
+  margin-bottom: 16px;
+  text-align: center;
+}
+.transfer-manual-box h3 {
+  margin: 0;
+  color: #006400;
+}
   </style>
  
  
@@ -206,8 +217,9 @@ rekening-row {
 <p style="text-align:center">Total Tagihan: <strong>Rp 259.000</strong></p>
 
 <div class="container">
-  <div class="form-section">
-    <h3>✔ Transfer Manual</h3>
+  <div class="transfer-manual-box">
+  <h3>✔ Transfer Manual</h3>
+</div>
 
     <label for="bank">Bank Tujuan</label>
 <select id="bank" name="bank">
