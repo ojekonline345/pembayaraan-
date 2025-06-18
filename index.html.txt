@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pembayaran ASTINDO</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      background-color: #f0f0f0;
+      padding: 20px;
+    }
+    .container {
+      background-color: #fff;
+      max-width: 500px;
+      margin: auto;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    .label {
+      font-weight: bold;
+    }
+    .button {
+      background-color: #2ecc71;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      margin-top: 15px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2>💳 Informasi Pembayaran</h2>
+    <p><span class="label">Bank:</span> BCA</p>
+    <p><span class="label">Nama Penerima:</span> Lala</p>
+    <p><span class="label">No. Rekening:</span> <span id="rekening">55668885</span>
+      <button class="button" onclick="salinRekening()">Salin</button>
+    </p>
+    <p><span class="label">Jumlah:</span> Rp <span id="jumlah">259000</span></p>
+
+    <button class="button" onclick="kirimWA()">Kirim Bukti Pembayaran</button>
+  </div>
+
+  <script>
+    function salinRekening() {
+      const rekening = document.getElementById("rekening").innerText;
+      navigator.clipboard.writeText(rekening)
+        .then(() => alert("Nomor rekening disalin!"))
+        .catch(err => alert("Gagal menyalin nomor rekening"));
+    }
+
+    function kirimWA() {
+      const jumlah = document.getElementById("jumlah").innerText;
+      const pesan = `Halo, saya sudah melakukan pembayaran sebesar Rp ${jumlah}. Berikut bukti transfernya.`;
+      const url = `https://wa.me/6281234567890?text=${encodeURIComponent(pesan)}`;
+      window.open(url, "_blank");
+    }
+  </script>
+</body>
+</html>
