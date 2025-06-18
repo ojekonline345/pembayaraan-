@@ -1,10 +1,139 @@
 <!DOCTYPE html>
-<html>
+<html lang="id">
 <head>
-  <title>Pembayaran</title>
+  <meta charset="UTF-8">
+  <title>Halaman Pembayaran</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f5f5f5;
+      margin: 0;
+      padding: 20px;
+    }
+
+    .tagihan {
+      font-size: 18px;
+      margin-bottom: 20px;
+    }
+
+    .container {
+      display: flex;
+      justify-content: space-between;
+      background: #ffffff;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      max-width: 900px;
+      margin: auto;
+    }
+
+    .form-section {
+      width: 60%;
+    }
+
+    .summary-section {
+      width: 35%;
+      background: #f9f9f9;
+      padding: 15px;
+      border-left: 2px solid #e0e0e0;
+    }
+
+    .green-box {
+      background: #e8f5e9;
+      border: 1px solid #4caf50;
+      color: #2e7d32;
+      padding: 10px;
+      margin-bottom: 20px;
+      border-radius: 5px;
+      font-weight: bold;
+    }
+
+    label {
+      display: block;
+      margin-top: 10px;
+      font-weight: bold;
+    }
+
+    select, input[type="text"] {
+      width: 100%;
+      padding: 8px;
+      margin-top: 5px;
+      margin-bottom: 10px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+
+    .checkbox {
+      margin: 10px 0;
+    }
+
+    .btn {
+      background: #f44336;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      cursor: pointer;
+      border-radius: 5px;
+    }
+
+    .summary p {
+      margin: 10px 0;
+      font-size: 16px;
+    }
+
+    .summary h3 {
+      margin-bottom: 15px;
+    }
+
+    .link-detail {
+      color: #2e7d32;
+      text-decoration: underline;
+      font-size: 14px;
+      cursor: pointer;
+      margin-top: 10px;
+    }
+  </style>
 </head>
 <body>
-  <h1>Selamat datang di situs Pembayaran</h1>
-  <p>Ini adalah halaman utama.</p>
+
+  <div class="tagihan"><strong>Total Tagihan:</strong> Rp 259.000</div>
+
+  <div class="container">
+    <!-- Form Transfer -->
+    <div class="form-section">
+      <div class="green-box">✔ Transfer Manual</div>
+
+      <label>Bank Tujuan</label>
+      <select>
+        <option>Bank BCA</option>
+        <option>Bank BRI</option>
+        <option>Bank Mandiri</option>
+      </select>
+
+      <label>Nama Pemilik Rekening</label>
+      <input type="text" value="Lala">
+
+      <label>No Rekening</label>
+      <input type="text" value="55668885">
+
+      <div class="checkbox">
+        <input type="checkbox" checked> Simpan nomor rekening
+      </div>
+
+      <button class="btn">Bayar Sekarang</button>
+    </div>
+
+    <!-- Ringkasan Pembayaran -->
+    <div class="summary-section">
+      <div class="summary">
+        <h3>Ringkasan Pembayaran</h3>
+        <p><strong>Total Transaksi:</strong> Rp 259.000</p>
+        <p><strong>Biaya Layanan:</strong> Gratis</p>
+        <p><strong>Total Tagihan:</strong> Rp 259.000</p>
+        <div class="link-detail">Lihat detail transaksi</div>
+      </div>
+    </div>
+  </div>
+
 </body>
 </html>
