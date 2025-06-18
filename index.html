@@ -127,6 +127,36 @@
 </style>
   
 </head>
+  <style>
+    .summary-item, .summary-total {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 10px;
+    }
+
+    .amount-input {
+      border: none;
+      background: transparent;
+      font-size: 16px;
+      text-align: right;
+      width: 100px;
+      outline: none;
+      appearance: textfield;
+    }
+
+    .amount-input::-webkit-inner-spin-button,
+    .amount-input::-webkit-outer-spin-button {
+      -webkit-appearance: none;
+      margin: 0;
+    }
+
+    .summary-link a {
+      color: green;
+      text-decoration: none;
+      font-weight: 500;
+    }
+  </style>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
 <body>
@@ -178,7 +208,7 @@
 
 <div class="summary-item">
   <span>Biaya Layanan</span>
-  <input type="text" class="amount-input" value="Gratis">
+  <span>Gratis</span>
 </div>
 
 <div class="summary-total">
